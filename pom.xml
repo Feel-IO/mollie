@@ -6,7 +6,7 @@
 
     <groupId>be.woutschoovaerts</groupId>
     <artifactId>mollie</artifactId>
-    <version>3.3.0</version>
+    <version>3.4.0</version>
 
     <name>Mollie with Java</name>
     <description>Java framework to consume the Mollie API</description>
@@ -74,6 +74,12 @@
         <dependency>
             <groupId>com.fasterxml.jackson.datatype</groupId>
             <artifactId>jackson-datatype-jdk8</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jsr310</artifactId>
             <version>${jackson.version}</version>
         </dependency>
 

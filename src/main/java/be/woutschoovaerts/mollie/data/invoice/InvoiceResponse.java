@@ -7,7 +7,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 @Data
@@ -26,11 +26,11 @@ public class InvoiceResponse {
 
     private InvoiceStatus status;
 
-    private Date issuedAt;
+    private LocalDate issuedAt;
 
-    private Date paidAt;
+    private LocalDate paidAt;
 
-    private Date dueAt;
+    private LocalDate dueAt;
 
     private Amount netAmount;
 

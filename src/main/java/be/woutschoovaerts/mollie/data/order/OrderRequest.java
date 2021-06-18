@@ -3,7 +3,6 @@ package be.woutschoovaerts.mollie.data.order;
 import be.woutschoovaerts.mollie.data.common.Amount;
 import be.woutschoovaerts.mollie.data.common.Locale;
 import be.woutschoovaerts.mollie.data.payment.PaymentMethod;
-import be.woutschoovaerts.mollie.serializer.ISO8601DateFormatSerializer;
 import be.woutschoovaerts.mollie.serializer.PaymentMethodSerializer;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import lombok.AllArgsConstructor;
@@ -11,7 +10,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -34,7 +33,7 @@ public class OrderRequest {
     private Optional<OrderAddressRequest> shippingAddress = Optional.empty();
 
     @Builder.Default
-    private Optional<Date> consumerDateOfBirth = Optional.empty();
+    private Optional<LocalDate> consumerDateOfBirth = Optional.empty();
 
     @Builder.Default
     private Optional<String> redirectUrl = Optional.empty();
@@ -52,8 +51,7 @@ public class OrderRequest {
 
     private Map<String, Object> metadata;
 
-    @JsonSerialize(using = ISO8601DateFormatSerializer.class)
-    private Optional<Date> expiresAt = Optional.empty();
+    private Optional<LocalDate> expiresAt = Optional.empty();
 
     // OAuth Params
     @Builder.Default

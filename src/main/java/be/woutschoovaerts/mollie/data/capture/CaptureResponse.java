@@ -8,7 +8,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
+import java.time.OffsetDateTime;
 import java.util.Optional;
 
 @Data
@@ -33,7 +33,7 @@ public class CaptureResponse {
 
     private Optional<String> settlementId  = Optional.empty();
 
-    private Date createdAt;
+    private OffsetDateTime createdAt;
 
     @JsonProperty("_links")
     private CaptureLinks links;

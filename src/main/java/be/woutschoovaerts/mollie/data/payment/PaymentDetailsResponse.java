@@ -6,7 +6,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
+
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -74,9 +75,9 @@ public class PaymentDetailsResponse {
 
     private Optional<String> creditorIdentifier = Optional.empty();
 
-    private Optional<Date> dueDate = Optional.empty();
+    private Optional<LocalDate> dueDate = Optional.empty();
 
-    private Optional<Date> signatureDate = Optional.empty();
+    private Optional<LocalDate> signatureDate = Optional.empty();
 
     private Optional<String> bankReasonCode = Optional.empty();
 

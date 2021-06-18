@@ -1,3 +1,6 @@
+## 3.4.0
+- Changed `java.util.Date` fields to its `java.time` representatives
+
 ## 3.3.0
 - Changed OrderRequest `expiresAt` field date serialization format to `yyyy-MM-dd`
 

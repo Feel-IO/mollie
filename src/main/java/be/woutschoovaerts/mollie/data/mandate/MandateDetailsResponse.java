@@ -5,7 +5,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
+
+import java.time.LocalDate;
 import java.util.Optional;
 
 @Data
@@ -28,6 +29,6 @@ public class MandateDetailsResponse {
 
     private Optional<String> cardFingerprint = Optional.empty();
 
-    private Optional<Date> cardExpiryDate = Optional.empty();
+    private Optional<LocalDate> cardExpiryDate = Optional.empty();
 
 }

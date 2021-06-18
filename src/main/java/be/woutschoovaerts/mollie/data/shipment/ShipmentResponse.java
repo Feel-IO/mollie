@@ -7,7 +7,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
+import java.time.OffsetDateTime;
 import java.util.List;
 
 @Data
@@ -22,7 +22,7 @@ public class ShipmentResponse {
 
     private String orderId;
 
-    private Date createdAt;
+    private OffsetDateTime createdAt;
 
     private ShipmentTrackingResponse tracking;
 

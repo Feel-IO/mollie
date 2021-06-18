@@ -6,7 +6,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
+import java.time.OffsetDateTime;
+
 
 @Data
 @AllArgsConstructor
@@ -18,7 +19,7 @@ public class OnboardingResponse {
 
     private String name;
 
-    private Date signedUpAt;
+    private OffsetDateTime signedUpAt;
 
     private OnboardingStatus status;
 

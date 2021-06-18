@@ -7,7 +7,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.Map;
 import java.util.Optional;
 import java.util.OptionalInt;
@@ -23,7 +23,7 @@ public class UpdateSubscriptionRequest {
     private OptionalInt times = OptionalInt.empty();
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
-    private Optional<Date> startDate = Optional.empty();
+    private Optional<LocalDate> startDate = Optional.empty();
 
     private Optional<String> description = Optional.empty();
 

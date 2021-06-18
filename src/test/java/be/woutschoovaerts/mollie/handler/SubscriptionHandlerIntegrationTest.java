@@ -19,7 +19,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.Optional;
 
 import static be.woutschoovaerts.mollie.IntegrationTestConstants.API_KEY;
@@ -140,7 +140,7 @@ class SubscriptionHandlerIntegrationTest {
                 .consumerName("John Doe")
                 .consumerAccount("NL55INGB0000000000")
                 .consumerBic(Optional.of("INGBNL2A"))
-                .signatureDate(Optional.of(new Date()))
+                .signatureDate(Optional.of(LocalDate.now()))
                 .mandateReference(Optional.of("YOUR-COMPANY-MD13804"))
                 .build();
 

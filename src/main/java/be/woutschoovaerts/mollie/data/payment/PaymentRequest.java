@@ -9,7 +9,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -46,7 +46,7 @@ public class PaymentRequest {
 
     private Optional<String> billingEmail = Optional.empty();
 
-    private Optional<Date> dueDate = Optional.empty();
+    private Optional<LocalDate> dueDate = Optional.empty();
 
     private Optional<AddressRequest> billingAddress = Optional.empty();
 

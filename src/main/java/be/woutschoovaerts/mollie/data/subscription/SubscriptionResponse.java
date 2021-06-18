@@ -10,7 +10,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.util.Map;
 import java.util.Optional;
 
@@ -26,7 +27,7 @@ public class SubscriptionResponse {
 
     private String mode;
 
-    private Date createdAt;
+    private OffsetDateTime createdAt;
 
     private SubscriptionStatus status;
 
@@ -38,9 +39,9 @@ public class SubscriptionResponse {
 
     private String interval;
 
-    private Date startDate;
+    private LocalDate startDate;
 
-    private Optional<Date> nextPaymentDate = Optional.empty();
+    private Optional<LocalDate> nextPaymentDate = Optional.empty();
 
     private String description;
 
@@ -48,7 +49,7 @@ public class SubscriptionResponse {
 
     private Optional<String> mandateId = Optional.empty();
 
-    private Date canceledAt;
+    private OffsetDateTime canceledAt;
 
     private String webhookUrl;
 

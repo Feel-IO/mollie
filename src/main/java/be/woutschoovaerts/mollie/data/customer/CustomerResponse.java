@@ -7,7 +7,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
+import java.time.OffsetDateTime;
 import java.util.Locale;
 import java.util.Map;
 
@@ -31,7 +31,7 @@ public class CustomerResponse {
 
     private Map<String, Object> metadata;
 
-    private Date createdAt;
+    private OffsetDateTime createdAt;
 
     @JsonProperty("_links")
     private CustomerLinks links;

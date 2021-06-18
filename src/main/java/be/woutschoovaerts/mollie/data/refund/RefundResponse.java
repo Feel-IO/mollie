@@ -9,7 +9,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
+import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
@@ -42,7 +42,7 @@ public class RefundResponse {
 
     private Optional<String> orderId = Optional.empty();
 
-    private Date createdAt;
+    private OffsetDateTime createdAt;
 
     @JsonProperty("_embedded")
     private Optional<RefundEmbedded> embedded = Optional.empty();

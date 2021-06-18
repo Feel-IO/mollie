@@ -9,7 +9,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
+import java.time.OffsetDateTime;
 import java.util.Map;
 import java.util.Optional;
 
@@ -25,23 +25,23 @@ public class PaymentResponse {
 
     private String mode;
 
-    private Date createdAt;
+    private OffsetDateTime createdAt;
 
     private PaymentStatus status;
 
     private boolean isCancelable;
 
-    private Optional<Date> authorizedAt = Optional.empty();
+    private Optional<OffsetDateTime> authorizedAt = Optional.empty();
 
-    private Optional<Date> paidAt = Optional.empty();
+    private Optional<OffsetDateTime> paidAt = Optional.empty();
 
-    private Optional<Date> canceledAt = Optional.empty();
+    private Optional<OffsetDateTime> canceledAt = Optional.empty();
 
-    private Date expiresAt;
+    private OffsetDateTime expiresAt;
 
-    private Optional<Date> expiredAt = Optional.empty();
+    private Optional<OffsetDateTime> expiredAt = Optional.empty();
 
-    private Optional<Date> failedAt = Optional.empty();
+    private Optional<OffsetDateTime> failedAt = Optional.empty();
 
     private Amount amount;
 

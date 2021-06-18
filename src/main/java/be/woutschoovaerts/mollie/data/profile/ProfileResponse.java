@@ -6,7 +6,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
+import java.time.OffsetDateTime;
 
 @Data
 @AllArgsConstructor
@@ -34,7 +34,7 @@ public class ProfileResponse {
 
     private ProfileReviewResponse review;
 
-    private Date createdAt;
+    private OffsetDateTime createdAt;
 
     @JsonProperty("_links")
     private ProfileLinks links;

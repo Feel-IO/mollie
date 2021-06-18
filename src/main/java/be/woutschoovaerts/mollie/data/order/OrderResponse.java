@@ -8,7 +8,13 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.*;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
 
 @Data
 @AllArgsConstructor
@@ -41,7 +47,7 @@ public class  OrderResponse {
     private OrderAddressResponse billingAddress;
 
     @Builder.Default
-    private Optional<Date> consumerDateOfBirth = Optional.empty();
+    private Optional<LocalDate> consumerDateOfBirth = Optional.empty();
 
     private String orderNumber;
 
@@ -60,25 +66,25 @@ public class  OrderResponse {
     @Builder.Default
     private Optional<String> webhookUrl = Optional.empty();
 
-    private Date createdAt;
+    private OffsetDateTime createdAt;
 
     @Builder.Default
-    private Optional<Date> expiresAt = Optional.empty();
+    private Optional<OffsetDateTime> expiresAt = Optional.empty();
 
     @Builder.Default
-    private Optional<Date> expiredAt  = Optional.empty();
+    private Optional<OffsetDateTime> expiredAt  = Optional.empty();
 
     @Builder.Default
-    private Optional<Date> paidAt  = Optional.empty();
+    private Optional<OffsetDateTime> paidAt  = Optional.empty();
 
     @Builder.Default
-    private Optional<Date> authorizedAt  = Optional.empty();
+    private Optional<OffsetDateTime> authorizedAt  = Optional.empty();
 
     @Builder.Default
-    private Optional<Date> canceledAt  = Optional.empty();
+    private Optional<OffsetDateTime> canceledAt  = Optional.empty();
 
     @Builder.Default
-    private Optional<Date> completedAt  = Optional.empty();
+    private Optional<OffsetDateTime> completedAt  = Optional.empty();
 
     @Builder.Default
     @JsonProperty("_embedded")

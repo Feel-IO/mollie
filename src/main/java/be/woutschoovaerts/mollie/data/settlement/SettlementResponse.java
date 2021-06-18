@@ -7,7 +7,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
+import java.time.OffsetDateTime;
 import java.util.HashMap;
 
 @Data
@@ -22,9 +22,9 @@ public class SettlementResponse {
 
     private String reference;
 
-    private Date createdAt;
+    private OffsetDateTime createdAt;
 
-    private Date settledAt;
+    private OffsetDateTime settledAt;
 
     private SettlementStatus status;
 

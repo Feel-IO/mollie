@@ -8,7 +8,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
+import java.time.OffsetDateTime;
 import java.util.Optional;
 
 @Data
@@ -25,9 +25,9 @@ public class ChargebackResponse {
 
     private Amount settlementAmount;
 
-    private Date createdAt;
+    private OffsetDateTime createdAt;
 
-    private Date reversedAt;
+    private OffsetDateTime reversedAt;
 
     private String paymentId;
 
